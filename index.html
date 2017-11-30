@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    
+<header>
+<div class="row head">
+    <div class="col-md-12"> 
+        <h3 id="starwars">Star Wars</h3>
+    </div> 
+    </div>
+    <div class="row head">
+        <div class="col-md-6"> 
+            <h3 id="my-player">Choose your player!</h3>
+        </div>
+        <div class="col-md-6">
+            <h3 id="comp-player">Choose your opponent!</h3>
+        </div>
+    </div>
+    </header> 
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="thing" data-player="skywalker">Luke Skywalker</p> 
+                    <!-- <div class="hp"></div> -->
+                </div>
+                <div class="col-md-3">
+                    <p class="thing" data-player="chewie">Chewbacca</p>
+                    <!-- <div class="hp"></div> -->
+                </div>
+                <div class="col-md-3">
+                    <p class="thing" data-player="maul">Darth Maul</p>
+                    <!-- <div class="hp"></div> -->
+                </div>
+                <div class="col-md-3">
+                    <p class="thing" data-player="vader">Darth Vader</p>
+                    <!-- <div class="hp"></div> -->
+                </div>
+            </div>
+            <div class="row characters">
+                <div class="col-md-6">
+                    <div>My chosen character is: <span class="chosen"></span></div>
+                    <br>
+                    <div>My starting attack points are: <span class="hit-points"></span></div>
+                </div>
+                <div class="col-md-6">    
+                    <div>Computer character is: <span class="comp"></span></div>
+                    <br>
+                    <div>My starting attack points are: <span class="comp-points"></span></div>
+                </div> 
+            </div>
+            <div class="row battle">
+                <div class="col-md-3">
+                        <button>Attack</button>  
+                </div>
+                <div class="col-md-3">
+                    <p>My health points: <span class="health"></span></p>  
+                    <p>My attack points: <span class="attack"></span></p>    
+                </div>
+                <div class="col-md-3">
+                    <p>Computer health points: <span class="comp-health"></span></p>
+                    <p>Computer attack points: <span class="comp-attack"></span></p>      
+                </div>
+            </div>
+        </div>
+   
+    
+</body>
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
+</html>
