@@ -1,31 +1,49 @@
+/* background */
 body {
-    /* background-image:url("images/starwars.jpg"); */
-    background-color:black;
+    /* background-image:url("../images/starwars.jpg");
+    background-repeat: no-repeat; */
+    /* background-color:black; */
 }
-
+/* title */
 #starwars {
     font-family: 'Skranji', cursive;
     font-size: 70px;
     color: gold;
     text-align: center;
 }
-
-.battle {
-    margin-top: 5%;
-}
-.characters {
-    margin-top: 3%;
-}
+/* head */
 .head {
     margin-bottom: 3%;
 }
 
+/* pick players */
 #my-player, #comp-player {
     color: rgb(75, 213, 238);
     font-size: 40px;
     text-align: center;
 
 }
-maul {
-    background-image: url('assets/images/darthmaul.jpg');
+
+/* chosen character */
+.characters {
+    margin-top: 3%;
+    color: rgb(75, 213, 238);
+    font-size: 25px;
+    font-family: 'Skranji', cursive;
+    text-align: center;
+}
+/* battle */
+#battle {
+    color: gold;
+    font-size: 20px;
+}
+
+/* attack */
+.battle {
+    margin-top: 5%;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }

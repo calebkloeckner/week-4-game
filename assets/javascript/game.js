@@ -11,28 +11,37 @@ $(document).ready(function() {
     // characters to chose from
     var characters = {
 skywalker: {
-
     name: 'Luke Skywalker',
     health: 500,
-    attack: 100
+    attack: 100,
+    imgUrl: './assets/images/skywalker.png',
 },
 chewie: {
     name: "Chewbacca",
     health: 800,
-    attack: 130
+    attack: 130,
+    imgUrl: './assets/images/chewie.png',
 },
-maul: {
-    
+maul: {    
     name: "Darth Maul",
     health: 500,
-    attack: 90
+    attack: 90,
+    imgUrl: './assets/images/darthmaul.jpg',
 },
 vader: {
     name: "Darth Vader",
     health: 1000,
-    attack: 80
+    attack: 80,
+    imgUrl: './assets/images/vader.jpg',
 }
-};
+};    
+$('#skywalker').attr('src', characters.skywalker.imgUrl);
+$('#chewie').attr('src', characters.chewie.imgUrl);
+$('#maul').attr('src', characters.maul.imgUrl);
+$('#vader').attr('src', characters.vader.imgUrl);
+$('#my-image').css('display', 'none');
+$('#comp-image').css('display', 'none');
+
 // empty variable for player and computer
 var attacker;
 var defender;
@@ -51,16 +60,18 @@ for (var key in characters) {
         $("#comp-player").css("display", "none");
         $('.comp').text(defender.name);
         $('.comp-points').text(defender.attack);
+        $('#comp-image').attr('src', defender.imgUrl);
             
         //assign computer 
             console.log(defender);
         } else {
             attacker = characters[key];
-    
+        
         $(this).css('display', 'none');
         $("#my-player").css("display", "none");
         $('.chosen').text(attacker.name);
         $('.hit-points').text(attacker.attack);
+        $('#my-image').attr('src', attacker.imgUrl);
     // console.log(player); 
             console.log(attacker);
         }
@@ -94,9 +105,6 @@ for (var key in characters) {
 } else if (compHealth <= 0) {
         setTimeout(function(){
         alert("You win! Pick another victim.");
-        $(".comp").css("display", "none");
-        $(".comp-points").css("display", "none");
-        
          2000;
      });
     
