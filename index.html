@@ -13,9 +13,10 @@
     
     
 <header>
-<div class="row head">
+<div class="row top">
     <div class="col-md-12"> 
         <h3 id="starwars">Star Wars</h3>
+    
     </div> 
     </div>
     <div class="row head">
@@ -31,46 +32,52 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
+                    <div class="first" data-player="skywalker">
                     <img id="skywalker">
-                    <p class="thing" data-player="skywalker">Luke Skywalker</p> 
-                    <!-- <div class="hp"></div> -->
+                    <p class="thing" >Luke Skywalker<br>Health: <span id="sky"></span>
+                    <br>Attack: <span id="sky2"></span></p> 
+                </div>
                 </div>
                 <div class="col-md-3">
-                    <img id="chewie">
-                    <p class="thing" data-player="chewie">Chewbacca</p>
-                    <!-- <div class="hp"></div> -->
+                    <div class="first" data-player="chewie">
+                        <img id="chewie">
+                        <p class="thing" >Chewbacca<br>Health: <span id="chew"></span><br>Attack: <span id="chew2"></span></p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img id="maul">
-                    <p class="thing" data-player="maul">Darth Maul</p>
-                    <!-- <div class="hp"></div> -->
+                    <div class="first" data-player="maul">
+                        <img id="maul">
+                        <p class="thing" >Darth Maul<br>Health: <span id="maul2"></span><br>Attack: <span id="maul3"></span></p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <img id="vader">
-                    <p class="thing" data-player="vader">Darth Vader</p>
-                    <!-- <div class="hp"></div> -->
+                    <div class="first" data-player="vader">
+                        <img id="vader">
+                        <p class="thing" >Darth Vader<br>Health: <span id="vader2"></span><br>Attack: <span id="vader3"></span></p>
+                    </div>
                 </div>
             </div>
             <div class="text">
             <div class="row characters">
                 <div class="col-md-6">
-                    <div>My chosen character is: <span class="chosen"></span>
+                    <div>Chosen character is: <span class="chosen"></span>
                     <img id="my-image"></div>
                     <br>
-                    <div>My starting attack points are: <span class="hit-points"></span></div>
+                    <div>Starting health: <span id="my-health"></span></div>
+                    <div>Starting attack points are: <span class="hit-points"></span></div>
                 </div>
                 <div class="col-md-6">    
                     <div>Computer character is: <span class="comp"></span>
                     <img id="comp-image"></div>
-                    </div>
                     <br>
-                    <br>
-                    <div>My starting attack points are: <span class="comp-points"></span></div>
+                    <div>Starting health: <span id="first-health"></span></div>
+                    <div>Starting attack points are: <span class="comp-points"></span></div>
                 </div> 
+            </div>
             </div>
             <div class="row battle">
                 <div class="col-md-3">
-                        <button>Attack</button>  
+                        <button id="button">Attack</button>  
                 </div>
                 <div id="battle">
                 <div class="col-md-3">
@@ -84,9 +91,10 @@
             </div>
         </div>
     </div>
-   
-   
-    
+   <footer>
+       <h1 id="footer">DO OR DO NOT, THERE IS NO TRY!</h1>
+   </footer>
 </body>
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
+
 </html>
