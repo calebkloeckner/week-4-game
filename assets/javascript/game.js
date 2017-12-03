@@ -12,41 +12,51 @@ $(document).ready(function() {
     var characters = {
 skywalker: {
     name: 'Luke Skywalker',
-    health: 500,
-    attack: 100,
+    health: 800,
+    attack: 90,
     imgUrl: './assets/images/skywalker.png',
 },
 chewie: {
     name: "Chewbacca",
-    health: 800,
-    attack: 130,
+    health: 1100,
+    attack: 80,
     imgUrl: './assets/images/chewie.png',
 },
 maul: {    
     name: "Darth Maul",
-    health: 500,
+    health: 900,
     attack: 90,
     imgUrl: './assets/images/darthmaul.jpg',
 },
 vader: {
     name: "Darth Vader",
     health: 1000,
-    attack: 80,
+    attack: 100,
     imgUrl: './assets/images/vader.jpg',
 }
 };    
+// character attributes and images
 $('#skywalker').attr('src', characters.skywalker.imgUrl);
+$('#sky').text(characters.skywalker.health);
+$('#sky2').text(characters.skywalker.attack);
+
 $('#chewie').attr('src', characters.chewie.imgUrl);
+$('#chew').text(characters.chewie.health);
+$('#chew2').text(characters.chewie.attack);
+
 $('#maul').attr('src', characters.maul.imgUrl);
+$('#maul2').text(characters.maul.health);
+$('#maul3').text(characters.maul.attack);
+
 $('#vader').attr('src', characters.vader.imgUrl);
-$('#my-image').css('display', 'none');
-$('#comp-image').css('display', 'none');
+$('#vader2').text(characters.vader.health);
+$('#vader3').text(characters.vader.attack);
 
 // empty variable for player and computer
 var attacker;
-var defender;
-// $(".hp").html(character.health);
-$('p').on('click', function(){   
+var defender;   
+
+$('.first').on('click', function(){   
     // use jquery to select data-player attribute and iterate over the character object to assign attacker and defender character object
 var chosenCharacter = $(this).attr("data-player");
     // iterate over an object - for each key inside of characters object
@@ -58,9 +68,12 @@ for (var key in characters) {
         
         $(this).css('display', 'none');
         $("#comp-player").css("display", "none");
+        $('#' + $(this).attr("data-player")).css("display","none");
         $('.comp').text(defender.name);
         $('.comp-points').text(defender.attack);
+        $("#first-health").text(defender.health);
         $('#comp-image').attr('src', defender.imgUrl);
+        $('#comp-image').css("width", "200px");
             
         //assign computer 
             console.log(defender);
@@ -69,9 +82,12 @@ for (var key in characters) {
         
         $(this).css('display', 'none');
         $("#my-player").css("display", "none");
+        $('#' + $(this).attr("data-player")).css("display","none");
         $('.chosen').text(attacker.name);
         $('.hit-points').text(attacker.attack);
+        $("#my-health").text(attacker.health);
         $('#my-image').attr('src', attacker.imgUrl);
+        $('#my-image').css("width", "200px");
     // console.log(player); 
             console.log(attacker);
         }
